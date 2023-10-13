@@ -18,4 +18,15 @@ public class UserGoogleServiceImpl implements UserGoogleService {
 
         repository.save(entity);
     }
+
+    @Override
+    public boolean isExistedEmail(String email) {
+
+        if (repository.findByEmail(email).equals(null)) {
+
+            return false;
+        }
+
+        return true;
+    }
 }

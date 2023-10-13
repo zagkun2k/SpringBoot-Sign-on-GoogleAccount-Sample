@@ -5,4 +5,6 @@ import com.example.springsignon.entity.UserGoogleSignInInfoEntity;
 public interface UserGoogleService {
 
     void addUser(UserGoogleSignInInfoEntity entity);
+
+    boolean isExistedEmail(String email);
 }

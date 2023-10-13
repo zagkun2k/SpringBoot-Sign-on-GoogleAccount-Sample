@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserGoogleRepository extends JpaRepository<UserGoogleSignInInfoEntity, Long> {
 
+    UserGoogleSignInInfoEntity findByEmail(String email);
 }
